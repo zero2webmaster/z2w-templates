@@ -1,0 +1,24 @@
+# Files in this repo that should NOT be served as static assets from
+# templates.z2w.us. Wrangler-assets honors this file (gitignore syntax).
+#
+# Without this, the first deploy uploaded .git/HEAD, .git/config, etc. as
+# fetchable URLs at templates.z2w.us/.git/... — public but tacky and a
+# bandwidth waste. .gitignore alone doesn't block wrangler-assets uploads.
+
+# Git internals — never serve these
+.git
+.git/**
+
+# Wrangler internals — only on CI builders, but be defensive
+.wrangler
+.wrangler/**
+
+# Cloudflare Workers config — used at build time, no need to serve
+wrangler.jsonc
+
+# The sync.sh helper is a tool for the maintainer, not for downstream users
+sync.sh
+
+# OS / editor noise
+.DS_Store
+**/.DS_Store
