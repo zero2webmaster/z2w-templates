@@ -1,0 +1,12 @@
+{
+  // Cloudflare Workers config for the z2w-templates static mirror.
+  // Served at https://templates.z2w.us via Workers + Static Assets.
+  // Consumed by @zero2webmaster/starter-kit as the HTTPS fallback when
+  // a local Templates folder is absent.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "z2w-templates",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./"
+  }
+}
