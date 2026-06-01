@@ -1,0 +1,27 @@
+# ===========================================
+# .cursorignore - Exclude from AI context
+# ===========================================
+# Files listed here are completely invisible to the AI.
+# Do NOT add files you need to @-reference (like SETUP_GUIDE.md,
+# TROUBLESHOOTING.md, or HANDOFF.md) — those must remain accessible.
+# Only block large generated content the AI never needs.
+
+# Dependencies (large, auto-generated)
+node_modules/
+package-lock.json
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Build outputs
+dist/
+build/
+*.pyc
+__pycache__/
+
+# Temporary/generated files
+.tmp/
+*.log
